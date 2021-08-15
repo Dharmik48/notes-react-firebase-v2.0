@@ -1,4 +1,6 @@
 import React from 'react'
+import Notes from './Notes'
+import SearchBar from './SearchBar'
 import SideBar from './SideBar'
 
 const colors = [
@@ -28,6 +30,11 @@ const App = () => {
 	return (
 		<div className="app">
 			<SideBar colors={colors} />
+			<main>
+				<SearchBar />
+				<h1>Notes.</h1>
+				<Notes />
+			</main>
 		</div>
 	)
 }

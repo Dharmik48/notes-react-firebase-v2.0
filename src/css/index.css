@@ -17,8 +17,6 @@
 
 body {
 	font-family: 'poppins', sans-serif;
-	display: grid;
-	grid-template-columns: minmax(90px, 100px) 1fr;
 	height: 100vh;
 	width: 100%;
 }
@@ -29,5 +27,40 @@ body {
 }
 
 .app {
+	display: grid;
+	grid-template-columns: minmax(90px, 100px) 1fr;
 	height: 100%;
+}
+
+main {
+	padding: 1rem 2rem;
+	display: grid;
+	gap: 2rem;
+	grid-template-rows: auto auto 1fr;
+}
+
+form {
+	color: #bec5d7;
+	display: flex;
+	align-items: center;
+}
+
+form input {
+	flex: 1;
+	/* width: 100%; */
+	border: none;
+	background-color: transparent;
+	color: #a2a7b6;
+	outline: none;
+	font-size: 1rem;
+	padding: 1rem;
+}
+
+form input::placeholder {
+	color: #a2a7b6;
+}
+
+main h1 {
+	font-size: 2.5rem;
+	font-weight: bold;
 }
