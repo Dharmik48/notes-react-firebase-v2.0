@@ -1,12 +1,12 @@
 import React from 'react'
 import '../css/ColorPicker.css'
 
-const ColorPicker = ({ colors }) => {
-	const renderdColors = colors.map((color, i) => {
+const ColorPicker = ({ colors, showColors }) => {
+	const renderdColors = colors.map((color) => {
 		return (
 			<div
 				style={{ '--order': color.order }}
-				className="hidden"
+				className={showColors ? 'appear' : 'hidden'}
 				data-color={color.color}
 			></div>
 		)
