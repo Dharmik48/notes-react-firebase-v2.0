@@ -1,0 +1,33 @@
+/* Variables */
+:root {
+	--textSize: 1rem;
+	--yellow: #f5972c;
+	--orange: #f3542a;
+	--purple: #7049f0;
+	--blue: #0aa4f5;
+	--green: #c6d947;
+	--black: #31291d;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'poppins', sans-serif;
+	display: grid;
+	grid-template-columns: minmax(90px, 100px) 1fr;
+	height: 100vh;
+	width: 100%;
+}
+
+#root {
+	height: 100%;
+	width: 100%;
+}
+
+.app {
+	height: 100%;
+}

@@ -1,0 +1,86 @@
+.add-note {
+	margin-top: 1.5rem;
+	display: grid;
+	gap: 1rem;
+}
+
+.add-note-btn {
+	border: none;
+	background-color: var(--black);
+	color: #fff;
+	border-radius: 50%;
+	padding: 0.5rem;
+	height: 35px;
+	width: 35px;
+	cursor: pointer;
+	transition: transform 50ms ease;
+}
+
+.add-note-btn:active {
+	transform: scale(0.8);
+}
+
+.add-note-colors div {
+	height: 1rem;
+	width: 1rem;
+	border-radius: 50%;
+	cursor: pointer;
+	/* transform: scale(0); */
+}
+
+.add-note-colors div.appear {
+	animation: appear 500ms backwards;
+}
+
+.add-note-colors div.hidden {
+	animation: hide 500ms forwards;
+}
+
+.add-note-colors div:nth-child(1) {
+	background-color: var(--yellow);
+	animation-delay: calc(var(--order) * 100ms);
+}
+
+.add-note-colors div:nth-child(2) {
+	background-color: var(--orange);
+	animation-delay: calc(var(--order) * 100ms);
+}
+
+.add-note-colors div:nth-child(3) {
+	background-color: var(--purple);
+	animation-delay: calc(var(--order) * 100ms);
+}
+
+.add-note-colors div:nth-child(4) {
+	background-color: var(--blue);
+	animation-delay: calc(var(--order) * 100ms);
+}
+
+.add-note-colors div:nth-child(5) {
+	background-color: var(--green);
+	animation-delay: calc(var(--order) * 100ms);
+}
+
+@keyframes appear {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+@keyframes hide {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(0);
+	}
+}
+
+.add-note-colors {
+	display: grid;
+	gap: 1rem;
+	place-items: center;
+}
