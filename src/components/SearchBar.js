@@ -2,7 +2,7 @@ import React from 'react'
 
 const SearchBar = () => {
 	return (
-		<form>
+		<form className="search">
 			<i className="fad fa-search"></i>
 			<input
 				type="text"

@@ -1,0 +1,82 @@
+.notes-container {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+	grid-auto-rows: minmax(min-content, max-content);
+}
+
+.note {
+	min-height: 250px;
+	/* background-color: var(--blue); */
+	border-radius: 1rem;
+	padding: 1rem;
+	position: relative;
+}
+
+.note p,
+.create-note textarea {
+	background-color: transparent;
+	border: none;
+	font-family: inherit;
+	font-weight: bolder;
+	color: var(--black);
+	outline: none;
+	/* width: 100%; */
+	height: 100%;
+	resize: none;
+}
+
+.note i {
+	font-size: 1.5em;
+	position: absolute;
+	bottom: 1rem;
+	color: #fff;
+	background-color: var(--black);
+	padding: 0.5em;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 300ms ease;
+	transform: scale(0);
+}
+
+.note:hover i {
+	transform: scale(1);
+}
+
+.note i:active {
+	transform: scale(0.8);
+}
+
+/* SIDEBAR */
+
+.note p::-webkit-scrollbar {
+	width: 5px;
+	cursor: pointer;
+}
+
+body::-webkit-scrollbar-track {
+	background: gray;
+}
+
+.note p::-webkit-scrollbar-thumb {
+	background: var(--black);
+	border-radius: 50px;
+}
+
+.create-note .note {
+	height: 100%;
+	padding: 2em;
+}
+
+.create-note .note textarea {
+	font-size: 1.5rem;
+	width: 100%;
+}
+
+.note i:first-of-type {
+	right: 4rem;
+}
+
+.note i:last-of-type {
+	right: 1rem;
+}

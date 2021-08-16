@@ -39,15 +39,20 @@ main {
 	grid-template-rows: auto auto 1fr;
 }
 
-form {
-	color: #bec5d7;
+nav {
 	display: flex;
 	align-items: center;
 }
 
-form input {
+form.search {
+	color: #bec5d7;
+	display: flex;
+	align-items: center;
+	width: 75%;
+}
+
+form.search input {
 	flex: 1;
-	/* width: 100%; */
 	border: none;
 	background-color: transparent;
 	color: #a2a7b6;
@@ -56,11 +61,30 @@ form input {
 	padding: 1rem;
 }
 
-form input::placeholder {
+form.search input::placeholder {
 	color: #a2a7b6;
 }
 
 main h1 {
 	font-size: 2.5rem;
 	font-weight: bold;
+}
+
+.account {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.account .avatar-container {
+	max-height: 2.5em;
+	max-width: 2.5em;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-right: 1rem;
+}
+
+.account .avatar-container img {
+	height: 100%;
+	width: 100%;
 }

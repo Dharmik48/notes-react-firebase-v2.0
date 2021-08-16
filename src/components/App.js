@@ -1,4 +1,7 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { db } from '../firebase/firebase'
+import Account from './Account'
+import CreateNote from './CreateNote'
 import Notes from './Notes'
 import SearchBar from './SearchBar'
 import SideBar from './SideBar'
@@ -27,13 +30,56 @@ const colors = [
 ]
 
 const App = () => {
+	const [createNote, setCreateNote] = useState(false)
+	const [notes, setNotes] = useState([])
+	const [user, setUser] = useState(null)
+	const [color, setColor] = useState('')
+
+	useEffect(() => {
+		;(async () => {
+			if (user) {
+				const res = await db.collection('notes').doc(user.uid).get('notes')
+				if (res.exists) {
+					if (res.data().notes) {
+						console.log('data is available')
+						setNotes(res.data().notes)
+					}
+				}
+				// console.log(res)
+			}
+		})()
+	}, [user])
+
 	return (
 		<div className="app">
-			<SideBar colors={colors} />
+			<SideBar
+				colors={colors}
+				setColor={setColor}
+				setCreateNote={setCreateNote}
+				user={user}
+			/>
 			<main>
-				<SearchBar />
+				<nav>
+					<SearchBar />
+					<Account
+						user={user}
+						setUser={setUser}
+						setNotes={setNotes}
+						setCreateNote={setCreateNote}
+					/>
+				</nav>
 				<h1>Notes.</h1>
-				<Notes />
+				{createNote ? (
+					<CreateNote
+						color={color}
+						notes={notes}
+						user={user}
+						setCreateNote={setCreateNote}
+						setNotes={setNotes}
+					/>
+				) : (
+					<Notes notes={notes} user={user} setNotes={setNotes} />
+				)}
 			</main>
 		</div>
 	)
