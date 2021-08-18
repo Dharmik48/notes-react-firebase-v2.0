@@ -67,6 +67,7 @@ const App = () => {
 						setUser={setUser}
 						setNotes={setNotes}
 						setCreateNote={setCreateNote}
+						setSearchTerm={setSearchTerm}
 					/>
 				</nav>
 				<h1>Notes.</h1>

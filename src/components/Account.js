@@ -1,10 +1,11 @@
 import React from 'react'
 import { auth, provider } from '../firebase/firebase'
 
-const Account = ({ user, setUser, setNotes, setCreateNote }) => {
+const Account = ({ user, setUser, setNotes, setCreateNote, setSearchTerm }) => {
 	const perfromLogin = async () => {
 		const res = await auth.signInWithPopup(provider)
 		setUser(res.user)
+		setSearchTerm('')
 	}
 
 	const signout = () => {
@@ -12,6 +13,7 @@ const Account = ({ user, setUser, setNotes, setCreateNote }) => {
 		setUser(null)
 		setNotes([])
 		setCreateNote(false)
+		setSearchTerm('')
 	}
 
 	return user ? (
