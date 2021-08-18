@@ -45,7 +45,7 @@ nav {
 }
 
 form.search {
-	color: #bec5d7;
+	color: #686b72;
 	display: flex;
 	align-items: center;
 	width: 75%;
@@ -55,7 +55,7 @@ form.search input {
 	flex: 1;
 	border: none;
 	background-color: transparent;
-	color: #a2a7b6;
+	color: #686b72;
 	outline: none;
 	font-size: 1rem;
 	padding: 1rem;
