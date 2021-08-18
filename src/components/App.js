@@ -32,6 +32,7 @@ const colors = [
 const App = () => {
 	const [createNote, setCreateNote] = useState(false)
 	const [notes, setNotes] = useState([])
+	const [searchTerm, setSearchTerm] = useState('')
 	const [user, setUser] = useState(null)
 	const [color, setColor] = useState('')
 
@@ -60,7 +61,7 @@ const App = () => {
 			/>
 			<main>
 				<nav>
-					<SearchBar />
+					<SearchBar setSearchTerm={setSearchTerm} />
 					<Account
 						user={user}
 						setUser={setUser}
@@ -78,7 +79,12 @@ const App = () => {
 						setNotes={setNotes}
 					/>
 				) : (
-					<Notes notes={notes} user={user} setNotes={setNotes} />
+					<Notes
+						searchTerm={searchTerm}
+						notes={notes}
+						user={user}
+						setNotes={setNotes}
+					/>
 				)}
 			</main>
 		</div>
