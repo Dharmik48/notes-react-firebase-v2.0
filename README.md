@@ -26,7 +26,7 @@ git clone https://github.com/Dharmik48/notes-react-firebase-v2.0.git
 
 ## Thanks to all Contributors
 
-Thanks a lot for spending your time helping quizzical to grow. Thanks a lot!
+Thanks a lot for spending your time!
 
 <a href="https://github.com/Dharmik48/notes-react-firebase-v2.0/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Dharmik48/notes-react-firebase-v2.0" />
