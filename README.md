@@ -36,4 +36,8 @@ Thanks a lot for spending your time!
 
 It will help a lot if you can give a ⭐ to the repository.
 
+# ScreenShots:
+
 [Check Out here](https://notes-react-firebase-v1.web.app/)
+![Screenshot_1](https://user-images.githubusercontent.com/71010239/184502820-33111de1-09d3-4695-a02d-20be90205184.png) ![image](https://user-images.githubusercontent.com/71010239/184502856-541be106-d8d4-4c8d-8203-e23afd251250.png)
+
