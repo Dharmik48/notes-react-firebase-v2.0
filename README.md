@@ -24,4 +24,16 @@ git clone https://github.com/Dharmik48/notes-react-firebase-v2.0.git
 
 - Finally, run `npm start` to view the project into your browser.
 
+## Thanks to all Contributors
+
+Thanks a lot for spending your time helping quizzical to grow. Thanks a lot!
+
+<a href="https://github.com/Dharmik48/notes-react-firebase-v2.0/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Dharmik48/notes-react-firebase-v2.0" />
+</a>
+
+## Please Leave a ⭐
+
+It will help a lot if you can give a ⭐ to the repository.
+
 [Check Out here](https://notes-react-firebase-v1.web.app/)
