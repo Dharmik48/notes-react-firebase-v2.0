@@ -11,7 +11,7 @@ $ git clone https://github.com/USER_NAME/notes-react-firebase-v2.0.git
 $ cd notes-react-firebase-v2.0
 $ npm install 
 
-// if you run into some 
+// if you run into some vulnerabilities
 $ npm audit fix --force
 
 ```
