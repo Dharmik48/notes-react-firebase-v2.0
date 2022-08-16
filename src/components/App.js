@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, createContext } from 'react'
 import { db } from '../firebase/firebase'
 import Account from './Account'
 import CreateNote from './CreateNote'
 import Notes from './Notes'
 import SearchBar from './SearchBar'
 import SideBar from './SideBar'
-
+import ReactSwitch from 'react-switch'
 const colors = [
 	{
 		order: 1,
@@ -28,6 +28,7 @@ const colors = [
 		color: 'green',
 	},
 ]
+export const ThemeContext = createContext(null);
 
 const App = () => {
 	const [createNote, setCreateNote] = useState(false)
@@ -35,6 +36,11 @@ const App = () => {
 	const [searchTerm, setSearchTerm] = useState('')
 	const [user, setUser] = useState(null)
 	const [color, setColor] = useState('')
+	const [theme,setTheme] = useState("light")
+
+	const toggleTheme =()=>{
+		setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
+	};	
 
 	useEffect(() => {
 		;(async () => {
@@ -52,7 +58,8 @@ const App = () => {
 	}, [user])
 
 	return (
-		<div className="app">
+		<ThemeContext.Provider value = {{theme,toggleTheme}}>
+		<div className="app" id={theme}>
 			<SideBar
 				colors={colors}
 				setColor={setColor}
@@ -69,6 +76,11 @@ const App = () => {
 						setCreateNote={setCreateNote}
 						setSearchTerm={setSearchTerm}
 					/>
+					<div className='switch'>
+					<ReactSwitch onChange = {toggleTheme} checked ={theme === "dark"} 
+								offColor = '#000' onColor = '#fff' onHandleColor = '#000'
+								uncheckedIcon = {false} checkedIcon = {false}/>
+					</div>
 				</nav>
 				<h1>Notes.</h1>
 				{createNote ? (
@@ -89,6 +101,7 @@ const App = () => {
 				)}
 			</main>
 		</div>
+		</ThemeContext.Provider>
 	)
 }
 

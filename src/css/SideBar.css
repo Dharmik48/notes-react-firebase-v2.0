@@ -4,13 +4,29 @@ aside {
 	justify-content: flex-start;
 	align-items: center;
 	height: 100%;
-	border-right: 1px solid rgb(199, 199, 199);
 	padding: 1rem;
-	background-color: #f1f3f8;
 	box-shadow: 0px 0px 13px 0px rgba(50, 50, 50, 0.36);
+}
+
+#light aside {
+	background-color: #f1f3f8;
+	border-right: 1px solid rgb(199, 199, 199);
+}
+
+#dark aside {
+	background-color: #333;
+	border-right: 1px solid rgb(1, 1, 1);
 }
 
 aside h2 {
 	font-size: var(--textSize);
 	font-weight: 500;
+}
+
+#light h2 {
+	color: #000;
+}
+
+#dark h2 {
+	color: #fff;
 }

@@ -6,14 +6,22 @@
 
 .add-note-btn {
 	border: none;
-	background-color: var(--black);
-	color: #fff;
 	border-radius: 50%;
 	padding: 0.5rem;
 	height: 35px;
 	width: 35px;
 	cursor: pointer;
 	transition: transform 50ms ease;
+}
+
+#light .add-note-btn {
+	background-color: var(--black);
+	color: #fff;
+}
+
+#dark .add-note-btn {
+	background-color: #fff;
+	color: #000;
 }
 
 .add-note-btn:active {

@@ -19,24 +19,42 @@
 	border: none;
 	font-family: inherit;
 	font-weight: bolder;
-	color: var(--black);
 	outline: none;
 	/* width: 100%; */
 	height: 100%;
 	resize: none;
 }
 
+#light .note p
+.create-note textarea {
+	color: var(--black);
+}
+
+#dark .note p,
+.create-note textarea {
+	color: #fff;
+}
+
+
 .note i {
 	font-size: 1.5em;
 	position: absolute;
 	bottom: 1rem;
-	color: #fff;
-	background-color: var(--black);
 	padding: 0.5em;
 	border-radius: 50%;
 	cursor: pointer;
 	transition: 300ms ease;
 	transform: scale(0);
+}
+
+#light .note i {
+	color: #fff;
+	background-color: var(--black);
+}
+
+#dark .note i {
+	color: #000;
+	background-color: #fff;
 }
 
 .note:hover i {

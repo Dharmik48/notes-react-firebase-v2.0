@@ -31,6 +31,13 @@ body {
 	grid-template-columns: minmax(90px, 100px) 1fr;
 	height: 100%;
 }
+#light {
+ background-color:#fff;
+}
+
+#dark {
+ background-color:#111;
+}
 
 main {
 	padding: 1rem 2rem;
@@ -45,24 +52,42 @@ nav {
 }
 
 form.search {
-	color: #686b72;
 	display: flex;
 	align-items: center;
 	width: 75%;
+}
+
+#light form.search {
+	color: #686b72;
+}
+
+#dark form.search {
+	color: #e6e6e6;
 }
 
 form.search input {
 	flex: 1;
 	border: none;
 	background-color: transparent;
-	color: #686b72;
 	outline: none;
 	font-size: 1rem;
 	padding: 1rem;
 }
 
-form.search input::placeholder {
+#light form.search input {
+	color: #686b72;
+}
+
+#dark form.search input {
+	color: #e6e6e6;
+}
+
+#light form.search input::placeholder {
 	color: #a2a7b6;
+}
+
+#dark form.search input::placeholder {
+	color: #e4e4e4;
 }
 
 main h1 {
@@ -87,4 +112,25 @@ main h1 {
 .account .avatar-container img {
 	height: 100%;
 	width: 100%;
+}
+
+.switch{
+	position: absolute;
+	right: 20px;
+}
+
+#light  h1 {
+	color : #000;
+}
+
+#dark h1 {
+	color: #fff;
+}
+
+#light p {
+	color: #000;
+}
+
+#dark p {
+	color: #fff;
 }
