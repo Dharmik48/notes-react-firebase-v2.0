@@ -1,5 +1,7 @@
 import React from 'react'
 import { auth, provider } from '../firebase/firebase'
+import icon from "../images/Gicon.png";
+
 
 const Account = ({ user, setUser, setNotes, setCreateNote, setSearchTerm }) => {
 	const perfromLogin = async () => {
@@ -27,8 +29,9 @@ const Account = ({ user, setUser, setNotes, setCreateNote, setSearchTerm }) => {
 			</p>
 		</div>
 	) : (
-		<p onClick={perfromLogin} style={{ cursor: 'pointer' }}>
-			Sign In
+		<p onClick={perfromLogin} style={{ cursor: 'pointer', display: "flex", boxShadow:"3px 5px #888888", borderRadius: "5px", border: "0.2px solid #888888", padding: "5px"}}>
+			<img style={{height: "30px"}} className='googleIcon' src={icon} alt='icon' />  
+			<span style={{marginTop: "5px"}}>Login with Google</span>
 		</p>
 	)
 }
