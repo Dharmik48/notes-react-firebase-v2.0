@@ -1,0 +1,89 @@
+.notes-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    grid-auto-rows: minmax(min-content, max-content);
+}
+
+.notedark {
+    min-height: 250px;
+    /* background-color: var(--blue); */
+    border-radius: 1rem;
+    padding: 1rem;
+    position: relative;
+    opacity:90%;
+}
+
+
+.notedark p,
+.create-notedark textarea {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    
+    border: none;
+    font-family: inherit;
+    /* font-weight: bolder; */
+    /* color: var(--black); */
+    outline: none;
+    width: 100%;
+    height: 100%;
+    resize: none;
+}
+
+.notedark i {
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 1rem;
+    /* color: white; */
+    background-color: var(--black);
+    padding: 0.5em;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 300ms ease;
+    transform: scale(0);
+}
+
+.notedark:hover i {
+    transform: scale(1);
+}
+
+.notedark i:active {
+    transform: scale(0.8);
+}
+
+/* SIDEBAR */
+
+.notedark p::-webkit-scrollbar {
+    width: 5px;
+    cursor: pointer;
+    
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(255, 253, 253);
+}
+
+.notedark p::-webkit-scrollbar-thumb {
+    background: var(--black);
+    border-radius: 50px;
+}
+
+.create-notedark .notedark {
+    height: 100%;
+    padding: 1em;
+}
+
+
+.create-notedark .notedark textarea {
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+
+.notedark i:first-of-type {
+    right: 4rem;
+}
+
+.notedark i:last-of-type {
+    right: 1rem;
+}
