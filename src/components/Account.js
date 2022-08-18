@@ -22,14 +22,10 @@ const Account = ({ user, setUser, setNotes, setCreateNote, setSearchTerm }) => {
 				<img src={user.photoURL} alt="avatar" />
 			</div>
 			<p className="user-name">{user.displayName}</p>
-			<p style={{ marginLeft: '2.5em' }} onClick={signout}>
-				Sign Out
-			</p>
+			<button className='signin__button' style={{ marginLeft: '2.5em' }} onClick={signout}>Sign Out</button>
 		</div>
 	) : (
-		<p onClick={perfromLogin} style={{ cursor: 'pointer' }}>
-			Sign In
-		</p>
+		<button className='signin__button' onClick={perfromLogin} style={{ cursor: 'pointer' }}>Sign In</button>
 	)
 }
 
