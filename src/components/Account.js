@@ -3,10 +3,13 @@ import { auth, provider } from '../firebase/firebase'
 
 const Account = ({ user, setUser, setNotes, setCreateNote, setSearchTerm }) => {
 	const perfromLogin = async () => {
-		const res = await auth.signInWithPopup(provider)
-		setUser(res.user)
-		setSearchTerm('')
+		await auth.signInWithPopup(provider)
 	}
+
+	auth.onAuthStateChanged((user) => {
+    	setUser(user);
+    	setSearchTerm("");
+  	});
 
 	const signout = () => {
 		auth.signOut()

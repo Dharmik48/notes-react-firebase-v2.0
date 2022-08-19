@@ -108,4 +108,16 @@ main h1 {
     color:#000;
     background-color:#e6e6e6;
     transition:all 0.2s;
+
+/* toggle button css */
+.mode {
+	/* background-color: #0aa4f5; */
+	padding: 2px;
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	right :0px;
+	top: 16px;
+   cursor: pointer;
 }
