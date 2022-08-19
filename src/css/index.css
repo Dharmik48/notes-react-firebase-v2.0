@@ -89,18 +89,36 @@ main h1 {
 	width: 100%;
 }
 
+.signin__button {
+	cursor: pointer;
+	color: #fff;
+	outline: none;
+	border: none;
+	font-weight: 700;
+	border-radius: 0.2vw;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	margin-right: 1rem;
+	padding-top: 0.5rem;
+	background-color: rgba(51, 51, 51, 0.5);
+	padding-bottom: 0.5rem;
+}
 
+.signin__button:hover {
+	color: #000;
+	background-color: #e6e6e6;
+	transition: all 0.2s;
+}
 /* toggle button css */
 .mode {
+	position: absolute;
 	/* background-color: #0aa4f5; */
 	padding: 2px;
 	width: fit-content;
 	display: flex;
 	align-items: center;
-	position: fixed;
-	right :0px;
+	/* position: fixed; */
+	right: 2rem;
 	top: 16px;
-   cursor: pointer;
-
-
+	cursor: pointer;
 }
