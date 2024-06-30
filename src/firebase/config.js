@@ -1,5 +1,5 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyDm41fvYdUxvXIukT2_Erviy1kORDgFa-g",
+  apiKey: process.env.FIREBASE_KEY,
   authDomain: "notes-react-firebase-v1.firebaseapp.com",
   projectId: "notes-react-firebase-v1",
   storageBucket: "notes-react-firebase-v1.appspot.com",
